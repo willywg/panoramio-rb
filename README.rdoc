@@ -1,3 +1,14 @@
 = PanoramioRb
 
-This project rocks and uses MIT-LICENSE.
+PanoramioRb gem help you to get geolocated photos from Panoramio.com how a Ruby Object.
+
+= Installation
+
+In your Gemfile:
+
+gem 'panoramio-rb', :git => 'git://github.com/willywg/panoramio-rb.git'
+
+= Usage
+
+panoramio = PanoramioRb.request_data
+photos = panoramio.photos
