@@ -6,7 +6,7 @@ PanoramioRb gem help you to get geolocated photos from Panoramio.com how a Ruby 
 
 In your Gemfile:
 
-gem 'panoramio-rb', :git => 'git://github.com/willywg/panoramio-rb.git'
+gem 'panoramio-rb'
 
 = Usage
 
