@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    panoramio-rb (0.0.4)
+    panoramio-rb (0.0.5)
       hashie (= 1.2.0)
       json (= 1.6.1)
       rails (~> 3.1.1)
