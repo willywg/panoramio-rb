@@ -9,9 +9,9 @@ Gem::Specification.new do |s|
   s.version     = PanoramioRb::VERSION
   s.authors     = ["William Wong Garay (willywg)"]
   s.email       = ["willywg@gmail.com"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of PanoramioRb."
-  s.description = "TODO: Description of PanoramioRb."
+  s.homepage    = "https://github.com/willywg/panoramio-rb"
+  s.summary     = "PanoramioRb gem help you to get geolocated photos from Panoramio.com how a Ruby Object."
+  s.description = "PanoramioRb gem help you to get geolocated photos from Panoramio.com how a Ruby Object."
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
