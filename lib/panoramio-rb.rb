@@ -13,7 +13,7 @@ module PanoramioRb
     :mapfilter => true
   }
   
-  def self.request_data(options = {})
+  def self.get_panoramas(options = {})
     panoramio_options = DEFAULT_OPTIONS
     panoramio_options.merge!(options)
     response = RestClient.get URL, :params => panoramio_options
