@@ -14,10 +14,40 @@ Or by command line
 == Usage
   require 'rubygems'
   require 'panoramio-rb'
-  panoramio = PanoramioRb.get_panoramas(:minx => '-1.80', :miny => '-9.0', :maxx => '1.80', :maxy => '9.0')
-  photos = panoramio.photos
+  panoramio = PanoramioRb.get_panoramas(
+    :minx=>'-72.69483717012992',
+    :miny=>'-13.307931783110847',
+    :maxx=>'-72.39756282987008',
+    :maxy=>'-13.018468216889152')
+  
+  # Or use
+  panoramio = PanoramioRb.get_panoramas_from_point([-13.1632,-72.5462])
+  
+  # To get photos
+  panoramio.photos
+  
+  # To get global total photos
+  panoramio[:count]
+  
+  # To verify if has more photos
+  panoramio.has_more
 
-=== Options
+  # Photos structure:
+  photo = panoramio.photos.first
+  photo.photo_id
+  photo.photo_title
+  photo.photo_url
+  photo.photo_file_url
+  photo.longitude
+  photo.latitude
+  photo.width
+  photo.height
+  photo.upload_date
+  photo.owner_id
+  photo.owner_name
+  photo.owner_url
+
+=== Options for get_panoramas function
   :set
     Type of photos. Use :public (by default) for popular photos, :full to get all photos, or a Panoramio User ID.
 
@@ -38,3 +68,19 @@ Or by command line
   :minx, :miny, :maxx, and :maxy
     This values define the area to show photos from (minimum longitude, latitude, maximum longitude
     and latitude, respectively).
+=== Options for get_panoramas_from_point function
+  :point
+    Array with Latitude, Longitude values
+  :radius
+    Distance from point. Default 10
+  :unit
+    Distance unit. Default :mi (miles). You can use too kilometers (:km)
+  :options
+    Hash values. The same options for get_panoramas function
+
+== Resources
+* Panoramio API: http://www.panoramio.com/api/data/api.html
+* Panoramio API Terms of Service: http://www.panoramio.com/api/data/terms.html
+
+== TODO
+* Make Tests :$

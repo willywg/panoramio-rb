@@ -20,6 +20,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'json', '1.6.1'
   s.add_dependency 'hashie', '1.2.0'
   s.add_dependency 'rest-client', '1.6.7'
+  s.add_dependency 'geocoder', '1.0.5'
 
   s.add_development_dependency "sqlite3"
 end
