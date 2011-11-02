@@ -31,7 +31,10 @@ Or by command line
     To collection photos. Default 20
 
   :mapfilter
-    Default true. When the mapfilter parameter is set to true, photos are filtered such that they look better when they are placed on a map. It takes into account the location and tries to avoid of returning photos of the same location.
+    Default true. When the mapfilter parameter is set to true, photos are filtered such that they look
+    better when they are placed on a map. It takes into account the location and tries to avoid of
+    returning photos of the same location.
 
   :minx, :miny, :maxx, and :maxy
-    This values define the area to show photos from (minimum longitude, latitude, maximum longitude and latitude, respectively).
+    This values define the area to show photos from (minimum longitude, latitude, maximum longitude
+    and latitude, respectively).
