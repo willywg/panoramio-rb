@@ -1,6 +1,6 @@
 = PanoramioRb
 
-PanoramioRb gem help you to get geolocated photos from Panoramio.com how a Ruby Object.
+PanoramioRb gem allows you to get geolocated photos from Panoramio.com as a Ruby Object.
 
 == Installation
 
@@ -49,7 +49,7 @@ Or by command line
 
 === Options for get_panoramas function
   :set
-    Type of photos. Use :public (by default) for popular photos, :full to get all photos, or a Panoramio User ID.
+    Type of photos. Uses :public (by default) for popular photos. Use :full to get all photos, or a Panoramio User ID.
 
   :size
     Photos size. You can use :original, :medium (by default), :thumbnail, :square, :mini_square
@@ -66,7 +66,7 @@ Or by command line
     returning photos of the same location.
 
   :minx, :miny, :maxx, and :maxy
-    This values define the area to show photos from (minimum longitude, latitude, maximum longitude
+    These values define the area to show photos from (minimum longitude, latitude, maximum longitude
     and latitude, respectively).
 === Options for get_panoramas_from_point function
   :point
