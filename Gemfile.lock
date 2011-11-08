@@ -1,12 +1,12 @@
 PATH
   remote: .
   specs:
-    panoramio-rb (1.0.1)
-      geocoder (= 1.0.5)
-      hashie (= 1.2.0)
-      json (= 1.6.1)
+    panoramio-rb (1.0.2)
+      geocoder (~> 1.0.5)
+      hashie (~> 1.2.0)
+      json (~> 1.6.1)
       rails (~> 3.1.1)
-      rest-client (= 1.6.7)
+      rest-client (~> 1.6.7)
 
 GEM
   remote: http://rubygems.org/
@@ -96,7 +96,7 @@ GEM
     treetop (1.4.10)
       polyglot
       polyglot (>= 0.3.1)
-    tzinfo (0.3.30)
+    tzinfo (0.3.31)
 
 PLATFORMS
   ruby
