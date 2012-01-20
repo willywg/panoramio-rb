@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    panoramio-rb (1.0.2)
+    panoramio-rb (1.0.3)
       geocoder (~> 1.0.5)
       hashie (~> 1.2.0)
       json (~> 1.6.1)
