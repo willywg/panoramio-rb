@@ -1,3 +1,6 @@
+# coding: utf-8
+require "panoramio-rb/version"
+
 require 'rubygems'
 require 'json'
 require 'hashie'
@@ -27,7 +30,7 @@ module PanoramioRb
   end
 
   def self.get_panoramas_from_point(point, radius = 10, unit = :mi, options = {})
-    points = Geocoder::Calculations.bounding_box(point, radius, { :unit => unit })
+    points = Geocoder::Calculations.bounding_box(point, radius, { :units => unit })
     options.merge!({
       :miny => points[0],
       :minx => points[1],

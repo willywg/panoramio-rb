@@ -1,26 +1,38 @@
-$:.push File.expand_path("../lib", __FILE__)
+# coding: utf-8
+lib = File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+require 'panoramio-rb/version'
 
-# Maintain your gem's version:
-require "panoramio-rb/version"
+Gem::Specification.new do |spec|
+  spec.name          = "panoramio-rb"
+  spec.version       = PanoramioRb::VERSION
+  spec.authors       = ["William Wong Garay"]
+  spec.email         = ["willywg@gmail.com"]
 
-# Describe your gem and declare its dependencies:
-Gem::Specification.new do |s|
-  s.name        = "panoramio-rb"
-  s.version     = PanoramioRb::VERSION
-  s.authors     = ["William Wong Garay (willywg)"]
-  s.email       = ["willywg@gmail.com"]
-  s.homepage    = "https://github.com/willywg/panoramio-rb"
-  s.summary     = "PanoramioRb gem help you to get geolocated photos from Panoramio.com how a Ruby Object."
-  s.description = "PanoramioRb gem help you to get geolocated photos from Panoramio.com how a Ruby Object."
+  spec.license       = "MIT"
+  spec.homepage      = "https://github.com/willywg/panoramio-rb"
+  spec.summary       = "PanoramioRb gem help you to get geolocated photos from Panoramio.com how a Ruby Object."
+  spec.description   = "PanoramioRb gem help you to get geolocated photos from Panoramio.com how a Ruby Object."
 
-  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
-  s.test_files = Dir["test/**/*"]
 
-  s.add_dependency "rails", ">= 3.1"
-  s.add_dependency 'json', '> 1.6.1'
-  s.add_dependency 'hashie', '> 1.2.0'
-  s.add_dependency 'rest-client', '~> 1.6.7'
-  s.add_dependency 'geocoder', '> 1.0.5'
+  # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
+  # to allow pushing to a single host or delete this section to allow pushing to any host.
+  if spec.respond_to?(:metadata)
+    spec.metadata['allowed_push_host'] = 'http://rubygems.org'
+  else
+    raise "RubyGems 2.0 or newer is required to protect against public gem pushes."
+  end
 
-  s.add_development_dependency "sqlite3"
+  spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
+  spec.bindir        = "exe"
+  spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
+  spec.require_paths = ["lib"]
+
+  spec.add_development_dependency "bundler", "~> 1.12"
+  spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency "rspec", "~> 3.0"
+  spec.add_dependency 'json', '> 1.6.1'
+  spec.add_dependency 'hashie', '> 1.2.0'
+  spec.add_dependency 'rest-client', '~> 1.6.7'
+  spec.add_dependency 'geocoder', '> 1.0.5'
 end
