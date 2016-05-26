@@ -1,7 +1,5 @@
 # coding: utf-8
 require "panoramio-rb/version"
-
-require 'rubygems'
 require 'json'
 require 'hashie'
 require 'rest_client'
