@@ -25,8 +25,8 @@ describe PanoramioRb do
           expect(panoramio.photos.count).to eq(20)
         end
       end
-      context "with area options" do
-        it "get panoramas within area" do
+      context "with options" do
+        it "get panoramas within specific area" do
           area = {
             minx: -72.69483717012992, 
             miny: -13.307931783110847, 
@@ -39,6 +39,15 @@ describe PanoramioRb do
 
           expect(photo.latitude).to be_between(area[:miny], area[:maxy])
           expect(photo.longitude).to be_between(area[:minx], area[:maxx])
+        end
+
+        it "get panoramas from User ID" do
+          user_id = 7449659
+          panoramio = PanoramioRb.get_panoramas(set: user_id)
+
+          photo = panoramio.photos.first
+
+          expect(photo.owner_id).to eq(user_id)
         end
       end
     end
