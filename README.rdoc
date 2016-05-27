@@ -15,10 +15,10 @@ Or by command line
   require 'rubygems'
   require 'panoramio-rb'
   panoramio = PanoramioRb.get_panoramas(
-    :minx=>'-72.69483717012992',
-    :miny=>'-13.307931783110847',
-    :maxx=>'-72.39756282987008',
-    :maxy=>'-13.018468216889152')
+    minx: -72.69483717012992,
+    miny: -13.307931783110847,
+    maxx: -72.39756282987008,
+    maxy: -13.018468216889152)
   
   # Or use
   panoramio = PanoramioRb.get_panoramas_from_point([-13.1632,-72.5462])
@@ -81,6 +81,3 @@ Or by command line
 == Resources
 * Panoramio API: http://www.panoramio.com/api/data/api.html
 * Panoramio API Terms of Service: http://www.panoramio.com/api/data/terms.html
-
-== TODO
-* Make Tests :$
