@@ -51,5 +51,14 @@ describe PanoramioRb do
         end
       end
     end
+
+    describe ".get_panoramas_from_point" do
+      it "get panoramas succesfully" do
+        panoramio = PanoramioRb.get_panoramas_from_point([-13.1632,-72.5462])
+
+        expect(panoramio.photos).not_to be nil
+        expect(panoramio.photos.count).to eq(20)
+      end
+    end
   end 
 end

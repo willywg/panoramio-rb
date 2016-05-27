@@ -17,7 +17,7 @@ module PanoramioRb
   
   def self.get_panoramas(options = {})
     panoramio_options = DEFAULT_OPTIONS
-    panoramio_options.merge!(options)
+    panoramio_options = panoramio_options.merge(options)
     response = RestClient.get URL, :params => panoramio_options
     if response.code == 200
       parse_data = JSON.parse(response.to_str)
