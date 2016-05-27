@@ -15,7 +15,7 @@ describe PanoramioRb do
     end
   end
 
-  describe "method" do
+  describe "methods" do
     describe ".get_panoramas" do
       context "without options" do
         it "get panoramas successfuly with default options" do
@@ -28,16 +28,17 @@ describe PanoramioRb do
       context "with area options" do
         it "get panoramas within area" do
           area = {
-            minx: '-72.69483717012992', 
-            miny: '-13.307931783110847', 
-            maxx: '-72.39756282987008', 
-            maxy: '-13.018468216889152'
+            minx: -72.69483717012992, 
+            miny: -13.307931783110847, 
+            maxx: -72.39756282987008, 
+            maxy: -13.018468216889152
           }
           panoramio = PanoramioRb.get_panoramas(area)
 
           photo = panoramio.photos.first
 
-          expect(photo.latitude).to be_within(area[:minx]).of(area[:maxx])
+          expect(photo.latitude).to be_between(area[:miny], area[:maxy])
+          expect(photo.longitude).to be_between(area[:minx], area[:maxx])
         end
       end
     end
