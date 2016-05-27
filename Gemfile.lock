@@ -37,7 +37,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  awesome_print (~> 1.6.1)
+  awesome_print (~> 1.6, >= 1.6.1)
   bundler (~> 1.12)
   panoramio-rb!
   rake (~> 10.0)
